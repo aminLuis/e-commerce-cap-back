@@ -1,13 +1,7 @@
 package com.api.ecommerce.ConvertDto;
 
-import com.api.ecommerce.DTOs.CategoryDto;
 import com.api.ecommerce.DTOs.ProductDto;
-import com.api.ecommerce.entities.CategoryEntity;
 import com.api.ecommerce.entities.ProductEntity;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ProductConvert {
 
