@@ -1,7 +1,9 @@
 package com.api.ecommerce.services;
 
 import com.api.ecommerce.ConvertDto.InventoryConvert;
+import com.api.ecommerce.ConvertDto.ProductConvert;
 import com.api.ecommerce.DTOs.InventoryDto;
+import com.api.ecommerce.DTOs.ProductDto;
 import com.api.ecommerce.Interfaces.IInventory;
 import com.api.ecommerce.dao.InventoryRepository;
 import com.api.ecommerce.entities.InventoryEntity;
@@ -46,5 +48,11 @@ public class InventoryService implements IInventory {
     @Override
     public void deleteById(UUID id) {
 
+    }
+
+    @Override
+    public InventoryDto findByProduct(ProductDto productDto) {
+        ProductConvert productConvert = new ProductConvert();
+        return inventoryConvert.inventoryEntityToDto(inventoryRepository.findByProduct(productConvert.productoDtoToEntity(productDto)));
     }
 }

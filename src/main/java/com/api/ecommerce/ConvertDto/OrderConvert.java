@@ -10,10 +10,6 @@ public class OrderConvert {
         orderDto.setId(orderEntity.getId());
         orderDto.setOrderDate(orderEntity.getOrderDate());
         orderDto.setCustomer(customerConvert.customerEntityToDto(orderEntity.getCustomer()));
-        /*orderDto.getCustomer().setEmail(orderEntity.getCustomer().getEmail());
-        orderDto.getCustomer().setName(orderEntity.getCustomer().getName());
-        orderDto.getCustomer().setId(orderEntity.getCustomer().getId());
-        orderDto.getCustomer().setAddress(orderEntity.getCustomer().getAddress());*/
         return orderDto;
     }
 
@@ -22,10 +18,6 @@ public class OrderConvert {
         orderEntity.setId(orderDto.getId());
         orderEntity.setOrderDate(orderDto.getOrderDate());
         orderEntity.setCustomer(customerConvert.customerDtoToEntity(orderDto.getCustomer()));
-        /*orderEntity.getCustomer().setId(orderDto.getCustomer().getId());
-        orderEntity.getCustomer().setName(orderDto.getCustomer().getName());
-        orderEntity.getCustomer().setAddress(orderDto.getCustomer().getAddress());
-        orderEntity.getCustomer().setEmail(orderDto.getCustomer().getEmail());*/
         return orderEntity;
     }
 }

@@ -17,13 +17,6 @@ public class CategoryConvert {
         CategoryDto categoryDto = new CategoryDto();
         categoryDto.setId(categoryEntity.getId());
         categoryDto.setName(categoryEntity.getName());
-        /*if(categoryEntity.getProducts() != null) {
-            List<ProductDto> productDtos = new ArrayList<>();
-            for (ProductEntity productEntity : categoryEntity.getProducts()) {
-                productDtos.add(productConvert.productEntityToDto(productEntity));
-            }
-            categoryDto.setProducts(productDtos);
-        }*/
         return categoryDto;
     }
 
@@ -31,13 +24,6 @@ public class CategoryConvert {
         CategoryEntity categoryEntity = new CategoryEntity();
         categoryEntity.setId(categoryDto.getId());
         categoryEntity.setName(categoryDto.getName());
-        /*if(categoryDto.getProducts() != null) {
-            List<ProductEntity> productEntities = new ArrayList<>();
-            for (ProductDto productDto : categoryDto.getProducts()) {
-                productEntities.add(productConvert.productoDtoToEntity(productDto));
-            }
-            categoryEntity.setProducts(productEntities);
-        }*/
         return categoryEntity;
     }
 }
